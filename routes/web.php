@@ -16,4 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/admin', 'AdminCtr@index');
-Route::get('/admin/home', 'AdminCtr@index');
+// Route::get('/admin/home', 'AdminCtr@index');
+Route::get('/admin/{vue_capture?}', 'AdminCtr@index')->where('vue_capture', '[\/\w\.-]*');
